@@ -11,11 +11,7 @@ const bodyParser = require('body-parser');
 
 app.use(express.json())
 app.use(bodyParser.json());
-app.use(cors({
-    origin: ["https://code-exercise-uv68.vercel.app"],
-    methods: ["GET", "POST"], // Allow only GET and POST requests
-    credentials: true // Allow credentials (cookies, authorization headers, etc.)
-}));
+app.use(cors());
 app.use('/api/table',userTable )
 
 
