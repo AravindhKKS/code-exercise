@@ -13,7 +13,7 @@ const Popup = () => {
 
     useEffect(() => {
         //  WEBSOCKET CONNECTION
-        const newSocket = new WebSocket("ws://localhost:3000/ws");
+        const newSocket = new WebSocket("wss://code-exercise-98l4.onrender.com:3000/ws");
         newSocket.onopen = () => console.log('WS Connected');
         newSocket.onclose = () => console.log('WS Disconnected');
         newSocket.onerror = (err) => console.log("WS Error");
