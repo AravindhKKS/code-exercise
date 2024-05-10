@@ -48,7 +48,7 @@ const DataTable = () => {
         </tbody>
       </table>
       {showForm ? null : (
-        <button className='add_item_button' onClick={toggleForm}>Add New Item</button>
+        <button className='add_item_button' onClick={toggleForm}>Create New Monitor</button>
       )}
        </div>
       {showForm && (<Popup />)}
