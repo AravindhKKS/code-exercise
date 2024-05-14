@@ -49,7 +49,7 @@ const Popup = () => {
           if (webSocket) {
             webSocket.send(JSON.stringify(newData));
           }
-          window.location.reload()
+          window.location.replace('/')
           setError('');
         } catch (err) {
           setError('Failed to create monitor. Please try again.'); 
