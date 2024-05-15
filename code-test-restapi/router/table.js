@@ -56,28 +56,28 @@ router.get('/datadog', async (req, res) => {
     }
 });
 
-// DELETE THE DATA
-router.delete('/datadog/:monitorId', async (req, res) => {
-    try {
-        const monitorId = req.params.monitorId;
+// // DELETE THE DATA
+// router.delete('/datadog/:monitorId', async (req, res) => {
+//     try {
+//         const monitorId = req.params.monitorId;
 
-        // DATADOG API HEADERS
-        const headers = {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'DD-API-KEY': "806ee99a72439ef2d0475c170047af37",
-            'DD-APPLICATION-KEY': "e1875f594aee0cb1aa1a013f6ef5043767bbc582"
-        };
+//         // DATADOG API HEADERS
+//         const headers = {
+//             'Content-Type': 'application/json',
+//             'Accept': 'application/json',
+//             'DD-API-KEY': "806ee99a72439ef2d0475c170047af37",
+//             'DD-APPLICATION-KEY': "e1875f594aee0cb1aa1a013f6ef5043767bbc582"
+//         };
 
-        // DELET THE DATA IN DATADOG USING MONITOR_ID
-        const response = await axios.delete(`https://api.us5.datadoghq.com/api/v1/monitor/${monitorId}`, { headers });
+//         // DELET THE DATA IN DATADOG USING MONITOR_ID
+//         const response = await axios.delete(`https://api.us5.datadoghq.com/api/v1/monitor/${monitorId}`, { headers });
 
-        // Return the response from Datadog API to the client
-        res.json(response.data);
-    } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-    }
-});
+//         // Return the response from Datadog API to the client
+//         res.json(response.data);
+//     } catch (error) {
+//         console.error('Error:', error.response ? error.response.data : error.message);
+//     }
+// });
 
 
 //WEBHOOK NOTIFICATION FORM DATADOG
