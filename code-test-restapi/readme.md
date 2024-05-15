@@ -9,7 +9,7 @@ This server serves as the backend for a data table application. It handles API r
 1. Clone the repository to your local machine.
 2. Navigate to the project directory in your terminal.
 3. Install dependencies by running `npm install`.
-4. Start the server by running `npm start`.
+4. Start the server by running `node index.js`.
 
 ## API Endpoints
 
